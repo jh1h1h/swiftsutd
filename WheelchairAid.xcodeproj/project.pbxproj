@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5407F6C62AA5A26100867491 /* WheelchairAidApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6C52AA5A26100867491 /* WheelchairAidApp.swift */; };
+		5407F6C82AA5A26100867491 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6C72AA5A26100867491 /* ContentView.swift */; };
+		5407F6CA2AA5A26300867491 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5407F6C92AA5A26300867491 /* Assets.xcassets */; };
+		5407F6CD2AA5A26300867491 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5407F6CC2AA5A26300867491 /* Preview Assets.xcassets */; };
+		5407F6D72AA5A26300867491 /* WheelchairAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6D62AA5A26300867491 /* WheelchairAidTests.swift */; };
+		5407F6E12AA5A26300867491 /* WheelchairAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6E02AA5A26300867491 /* WheelchairAidUITests.swift */; };
+		5407F6E32AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6E22AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5407F6D32AA5A26300867491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5407F6BA2AA5A26100867491 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5407F6C12AA5A26100867491;
+			remoteInfo = WheelchairAid;
+		};
+		5407F6DD2AA5A26300867491 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5407F6BA2AA5A26100867491 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5407F6C12AA5A26100867491;
+			remoteInfo = WheelchairAid;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5407F6C22AA5A26100867491 /* WheelchairAid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelchairAid.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5407F6C52AA5A26100867491 /* WheelchairAidApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairAidApp.swift; sourceTree = "<group>"; };
+		5407F6C72AA5A26100867491 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5407F6C92AA5A26300867491 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5407F6CC2AA5A26300867491 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5407F6D22AA5A26300867491 /* WheelchairAidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelchairAidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5407F6D62AA5A26300867491 /* WheelchairAidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairAidTests.swift; sourceTree = "<group>"; };
+		5407F6DC2AA5A26300867491 /* WheelchairAidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelchairAidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5407F6E02AA5A26300867491 /* WheelchairAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairAidUITests.swift; sourceTree = "<group>"; };
+		5407F6E22AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairAidUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5407F6BF2AA5A26100867491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5407F6CF2AA5A26300867491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5407F6D92AA5A26300867491 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5407F6B92AA5A26100867491 = {
+			isa = PBXGroup;
+			children = (
+				5407F6C42AA5A26100867491 /* WheelchairAid */,
+				5407F6D52AA5A26300867491 /* WheelchairAidTests */,
+				5407F6DF2AA5A26300867491 /* WheelchairAidUITests */,
+				5407F6C32AA5A26100867491 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5407F6C32AA5A26100867491 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5407F6C22AA5A26100867491 /* WheelchairAid.app */,
+				5407F6D22AA5A26300867491 /* WheelchairAidTests.xctest */,
+				5407F6DC2AA5A26300867491 /* WheelchairAidUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5407F6C42AA5A26100867491 /* WheelchairAid */ = {
+			isa = PBXGroup;
+			children = (
+				5407F6C52AA5A26100867491 /* WheelchairAidApp.swift */,
+				5407F6C72AA5A26100867491 /* ContentView.swift */,
+				5407F6C92AA5A26300867491 /* Assets.xcassets */,
+				5407F6CB2AA5A26300867491 /* Preview Content */,
+			);
+			path = WheelchairAid;
+			sourceTree = "<group>";
+		};
+		5407F6CB2AA5A26300867491 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5407F6CC2AA5A26300867491 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5407F6D52AA5A26300867491 /* WheelchairAidTests */ = {
+			isa = PBXGroup;
+			children = (
+				5407F6D62AA5A26300867491 /* WheelchairAidTests.swift */,
+			);
+			path = WheelchairAidTests;
+			sourceTree = "<group>";
+		};
+		5407F6DF2AA5A26300867491 /* WheelchairAidUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5407F6E02AA5A26300867491 /* WheelchairAidUITests.swift */,
+				5407F6E22AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift */,
+			);
+			path = WheelchairAidUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5407F6C12AA5A26100867491 /* WheelchairAid */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5407F6E62AA5A26300867491 /* Build configuration list for PBXNativeTarget "WheelchairAid" */;
+			buildPhases = (
+				5407F6BE2AA5A26100867491 /* Sources */,
+				5407F6BF2AA5A26100867491 /* Frameworks */,
+				5407F6C02AA5A26100867491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WheelchairAid;
+			productName = WheelchairAid;
+			productReference = 5407F6C22AA5A26100867491 /* WheelchairAid.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5407F6D12AA5A26300867491 /* WheelchairAidTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5407F6E92AA5A26300867491 /* Build configuration list for PBXNativeTarget "WheelchairAidTests" */;
+			buildPhases = (
+				5407F6CE2AA5A26300867491 /* Sources */,
+				5407F6CF2AA5A26300867491 /* Frameworks */,
+				5407F6D02AA5A26300867491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5407F6D42AA5A26300867491 /* PBXTargetDependency */,
+			);
+			name = WheelchairAidTests;
+			productName = WheelchairAidTests;
+			productReference = 5407F6D22AA5A26300867491 /* WheelchairAidTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5407F6DB2AA5A26300867491 /* WheelchairAidUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5407F6EC2AA5A26300867491 /* Build configuration list for PBXNativeTarget "WheelchairAidUITests" */;
+			buildPhases = (
+				5407F6D82AA5A26300867491 /* Sources */,
+				5407F6D92AA5A26300867491 /* Frameworks */,
+				5407F6DA2AA5A26300867491 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5407F6DE2AA5A26300867491 /* PBXTargetDependency */,
+			);
+			name = WheelchairAidUITests;
+			productName = WheelchairAidUITests;
+			productReference = 5407F6DC2AA5A26300867491 /* WheelchairAidUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5407F6BA2AA5A26100867491 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					5407F6C12AA5A26100867491 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					5407F6D12AA5A26300867491 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5407F6C12AA5A26100867491;
+					};
+					5407F6DB2AA5A26300867491 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 5407F6C12AA5A26100867491;
+					};
+				};
+			};
+			buildConfigurationList = 5407F6BD2AA5A26100867491 /* Build configuration list for PBXProject "WheelchairAid" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5407F6B92AA5A26100867491;
+			productRefGroup = 5407F6C32AA5A26100867491 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5407F6C12AA5A26100867491 /* WheelchairAid */,
+				5407F6D12AA5A26300867491 /* WheelchairAidTests */,
+				5407F6DB2AA5A26300867491 /* WheelchairAidUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5407F6C02AA5A26100867491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5407F6CD2AA5A26300867491 /* Preview Assets.xcassets in Resources */,
+				5407F6CA2AA5A26300867491 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5407F6D02AA5A26300867491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5407F6DA2AA5A26300867491 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5407F6BE2AA5A26100867491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5407F6C82AA5A26100867491 /* ContentView.swift in Sources */,
+				5407F6C62AA5A26100867491 /* WheelchairAidApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5407F6CE2AA5A26300867491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5407F6D72AA5A26300867491 /* WheelchairAidTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5407F6D82AA5A26300867491 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5407F6E12AA5A26300867491 /* WheelchairAidUITests.swift in Sources */,
+				5407F6E32AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5407F6D42AA5A26300867491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5407F6C12AA5A26100867491 /* WheelchairAid */;
+			targetProxy = 5407F6D32AA5A26300867491 /* PBXContainerItemProxy */;
+		};
+		5407F6DE2AA5A26300867491 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5407F6C12AA5A26100867491 /* WheelchairAid */;
+			targetProxy = 5407F6DD2AA5A26300867491 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5407F6E42AA5A26300867491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5407F6E52AA5A26300867491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5407F6E72AA5A26300867491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WheelchairAid/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairAid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5407F6E82AA5A26300867491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WheelchairAid/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairAid;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5407F6EA2AA5A26300867491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairAidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheelchairAid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WheelchairAid";
+			};
+			name = Debug;
+		};
+		5407F6EB2AA5A26300867491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairAidTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheelchairAid.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WheelchairAid";
+			};
+			name = Release;
+		};
+		5407F6ED2AA5A26300867491 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairAidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WheelchairAid;
+			};
+			name = Debug;
+		};
+		5407F6EE2AA5A26300867491 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WheelchairAidUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WheelchairAid;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5407F6BD2AA5A26100867491 /* Build configuration list for PBXProject "WheelchairAid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5407F6E42AA5A26300867491 /* Debug */,
+				5407F6E52AA5A26300867491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5407F6E62AA5A26300867491 /* Build configuration list for PBXNativeTarget "WheelchairAid" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5407F6E72AA5A26300867491 /* Debug */,
+				5407F6E82AA5A26300867491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5407F6E92AA5A26300867491 /* Build configuration list for PBXNativeTarget "WheelchairAidTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5407F6EA2AA5A26300867491 /* Debug */,
+				5407F6EB2AA5A26300867491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5407F6EC2AA5A26300867491 /* Build configuration list for PBXNativeTarget "WheelchairAidUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5407F6ED2AA5A26300867491 /* Debug */,
+				5407F6EE2AA5A26300867491 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5407F6BA2AA5A26100867491 /* Project object */;
+}
