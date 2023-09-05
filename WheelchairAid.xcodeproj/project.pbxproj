@@ -14,6 +14,9 @@
 		5407F6D72AA5A26300867491 /* WheelchairAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6D62AA5A26300867491 /* WheelchairAidTests.swift */; };
 		5407F6E12AA5A26300867491 /* WheelchairAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6E02AA5A26300867491 /* WheelchairAidUITests.swift */; };
 		5407F6E32AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6E22AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift */; };
+		5407F6F02AA6BE1B00867491 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6EF2AA6BE1B00867491 /* ButtonView.swift */; };
+		5407F6F22AA6C01900867491 /* BusStops.json in Resources */ = {isa = PBXBuildFile; fileRef = 5407F6F12AA6C01900867491 /* BusStops.json */; };
+		5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6F32AA6C18100867491 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		5407F6DC2AA5A26300867491 /* WheelchairAidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelchairAidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5407F6E02AA5A26300867491 /* WheelchairAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairAidUITests.swift; sourceTree = "<group>"; };
 		5407F6E22AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairAidUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5407F6EF2AA6BE1B00867491 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		5407F6F12AA6C01900867491 /* BusStops.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = BusStops.json; path = ../../../Downloads/BusStops/BusStops.json; sourceTree = "<group>"; };
+		5407F6F32AA6C18100867491 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,9 @@
 				5407F6C72AA5A26100867491 /* ContentView.swift */,
 				5407F6C92AA5A26300867491 /* Assets.xcassets */,
 				5407F6CB2AA5A26300867491 /* Preview Content */,
+				5407F6EF2AA6BE1B00867491 /* ButtonView.swift */,
+				5407F6F12AA6C01900867491 /* BusStops.json */,
+				5407F6F32AA6C18100867491 /* ProfileView.swift */,
 			);
 			path = WheelchairAid;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5407F6F22AA6C01900867491 /* BusStops.json in Resources */,
 				5407F6CD2AA5A26300867491 /* Preview Assets.xcassets in Resources */,
 				5407F6CA2AA5A26300867491 /* Assets.xcassets in Resources */,
 			);
@@ -257,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */,
 				5407F6C82AA5A26100867491 /* ContentView.swift in Sources */,
 				5407F6C62AA5A26100867491 /* WheelchairAidApp.swift in Sources */,
+				5407F6F02AA6BE1B00867491 /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
