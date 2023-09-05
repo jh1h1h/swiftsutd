@@ -16,12 +16,13 @@ struct ContentView: View {
                         .navigationTitle("Enter your bus stop")
                 }
                 .searchable(text: $searchText)
+        
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             VStack(alignment: .leading) {
-                Text("Hello, wold!")
+                Text("Hello, world!")
                     .font(.title)
                 HStack {
                     Text(/*@START_MENU_TOKEN@*/"subheadline"/*@END_MENU_TOKEN@*/)
