@@ -17,22 +17,6 @@ struct ContentView: View {
                 }
                 .searchable(text: $searchText)
         
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            VStack(alignment: .leading) {
-                Text("Hello, world!")
-                    .font(.title)
-                HStack {
-                    Text(/*@START_MENU_TOKEN@*/"subheadline"/*@END_MENU_TOKEN@*/)
-                        .font(.subheadline)
-                    Spacer()
-                    Text(/*@START_MENU_TOKEN@*/"subheadline"/*@END_MENU_TOKEN@*/)
-                        .font(.subheadline)
-                }
-            }
-        }
         .padding()
     }
 }
