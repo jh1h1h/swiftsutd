@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ButtonView: View {
+    @State var test = 0
     var body: some View {
-        Button("Button"){
-            print("Hello world")
+        
+        VStack {
+            Text(String(test))
+            Button("Button"){
+                test = test + 1
+            }
+            .buttonStyle(.borderedProminent)
         }
-        .buttonStyle(.borderedProminent)
     }
 }
 

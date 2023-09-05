@@ -12,27 +12,21 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
+            TabView {
+                        ProfileView()
+                            .tabItem {
+                                Label("Menu", systemImage: "list.dash")
+                            }
+
+                        ButtonView()
+                            .tabItem {
+                                Label("Order", systemImage: "square.and.pencil")
+                            }
+                    }
                     Text("Searching for \(searchText)")
                         .navigationTitle("Enter your bus stop")
                 }
                 .searchable(text: $searchText)
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            VStack(alignment: .leading) {
-                Text("Hello, wold!")
-                    .font(.title)
-                HStack {
-                    Text(/*@START_MENU_TOKEN@*/"subheadline"/*@END_MENU_TOKEN@*/)
-                        .font(.subheadline)
-                    Spacer()
-                    Text(/*@START_MENU_TOKEN@*/"subheadline"/*@END_MENU_TOKEN@*/)
-                        .font(.subheadline)
-                }
-            }
-        }
-        .padding()
     }
 }
 
