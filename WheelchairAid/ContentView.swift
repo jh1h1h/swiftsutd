@@ -13,20 +13,22 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             TabView {
-                        ProfileView()
-                            .tabItem {
-                                Label("Menu", systemImage: "list.dash")
-                            }
-
-                        ButtonView()
-                            .tabItem {
-                                Label("Order", systemImage: "square.and.pencil")
-                            }
+                ButtonView()
+                    .badge(2)
+                    .tabItem {
+                        Label("Received", systemImage: "tray.and.arrow.down.fill")
                     }
+                ProfileView()
+                    .tabItem {
+                        Label("Sent", systemImage: "tray.and.arrow.up.fill")
+                    }
+            }
                     Text("Searching for \(searchText)")
                         .navigationTitle("Enter your bus stop")
                 }
                 .searchable(text: $searchText)
+
+        .padding()
     }
 }
 
