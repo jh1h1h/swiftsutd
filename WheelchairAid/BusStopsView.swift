@@ -9,8 +9,7 @@ import SwiftUI
 
 struct BusStopsView: View {
     var body: some View {
-        NavigationStack{
-            VStack{
+        
                 List{
                     Section(header: HStack{
                         Text("Upper Changi")
@@ -24,7 +23,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("5 min").font(.system(size: 30))
+                                Text("5 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.green)
                                     Text("2 seats available")
@@ -38,7 +37,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("15 min").font(.system(size: 30))
+                                Text("15 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.red)
                                     Text("no seats available")
@@ -52,7 +51,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("18 min").font(.system(size: 30))
+                                Text("18 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.green)
                                     Text("1 seat available")
@@ -73,7 +72,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("5 min").font(.system(size: 30))
+                                Text("5 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.green)
                                     Text("2 seats available")
@@ -87,7 +86,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("15 min").font(.system(size: 30))
+                                Text("15 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.red)
                                     Text("no seats available")
@@ -101,7 +100,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("18 min").font(.system(size: 30))
+                                Text("18 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.green)
                                     Text("1 seat available")
@@ -122,7 +121,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("5 min").font(.system(size: 30))
+                                Text("5 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.green)
                                     Text("2 seats available")
@@ -136,7 +135,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("15 min").font(.system(size: 30))
+                                Text("15 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.red)
                                     Text("no seats available")
@@ -150,7 +149,7 @@ struct BusStopsView: View {
                             }
                             Spacer()
                             VStack{
-                                Text("18 min").font(.system(size: 30))
+                                Text("18 min").font(.system(size: 25))
                                 HStack{
                                     Image(systemName: "circle.fill").foregroundColor(.green)
                                     Text("1 seat available")
@@ -160,8 +159,7 @@ struct BusStopsView: View {
                     }
                     
                 }
-            }
-        }
+            
     }
     
     struct BusStopsView_Previews: PreviewProvider {
@@ -170,3 +168,4 @@ struct BusStopsView: View {
         }
     }
 }
+
