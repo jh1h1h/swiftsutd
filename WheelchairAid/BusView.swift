@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BusView: View {
     var body: some View {
-        
+        NavigationStack{
 }
 
 struct BusView_Previews: PreviewProvider {
