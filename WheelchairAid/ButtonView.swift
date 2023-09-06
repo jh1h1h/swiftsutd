@@ -17,19 +17,19 @@ struct ButtonView: View {
                 List {
                     ForEach(names.indices, id: \.self) { index in
                         NavigationLink {
-                            Text("Hi")
+                            bus_numberView(busstop: names[index])
                         } label: {
                             VStack(alignment: .leading){
-                                Text(numbers[index])
+                                Text(numbers[index]).padding(2)
                                     .font(.system(size: 15))
                                     .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.994, brightness: 0.586)/*@END_MENU_TOKEN@*/)
-                                Text(names[index]).bold()
+                                Text(names[index]).bold().font(.system(size: 18))
                                 HStack{
                                     Image(systemName: "circle.fill")
                                         .font(.system(size: 5))
                                         .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.994, brightness: 0.586)/*@END_MENU_TOKEN@*/)
                                     Text(roads[index])
-                                        .font(.system(size: 10))
+                                        .font(.system(size: 10)).padding(2)
                                 }
                                 
                             }

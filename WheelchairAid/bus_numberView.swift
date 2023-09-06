@@ -9,16 +9,16 @@ import SwiftUI
 
 struct bus_numberView: View {
     @State private var isRefreshing = false 
-
+    var busstop:String
     var body: some View {
         NavigationStack {
-            
+        
             List{
                     NavigationLink {
                         Text("map")
                     } label: {
                         HStack{
-                            Text("945")
+                            Text("945").font(.system(size: 25))
                             Spacer()
                             VStack{
                                 Text("2 mins").padding(5)
@@ -34,7 +34,7 @@ struct bus_numberView: View {
                     Text("map")
                 } label: {
                     HStack{
-                        Text("960")
+                        Text("960").font(.system(size: 25))
                         Spacer()
                         VStack{
                             Text("5 mins").padding(5)
@@ -50,7 +50,7 @@ struct bus_numberView: View {
                     Text("map")
                 } label: {
                     HStack{
-                        Text("187")
+                        Text("187").font(.system(size: 25))
                         Spacer()
                         VStack{
                             Text("7 mins").padding(5)
@@ -66,7 +66,7 @@ struct bus_numberView: View {
                     Text("map")
                 } label: {
                     HStack{
-                        Text("188")
+                        Text("188").font(.system(size: 25))
                         Spacer()
                         VStack{
                             Text("4 mins").padding(5)
@@ -78,9 +78,41 @@ struct bus_numberView: View {
                         }
                     }
                 }
+                NavigationLink {
+                    Text("map")
+                } label: {
+                    HStack{
+                        Text("987").font(.system(size: 25))
+                        Spacer()
+                        VStack{
+                            Text("4 mins").padding(5)
+                            HStack{
+                                Image(systemName: "figure.roll").foregroundColor(.green)
+                                Text("1 available").padding(5)
+                            }
+                            
+                        }
+                    }
+                }
+                NavigationLink {
+                    Text("map")
+                } label: {
+                    HStack{
+                        Text("75").font(.system(size: 25))
+                        Spacer()
+                        VStack{
+                            Text("4 mins").padding(5)
+                            HStack{
+                                Image(systemName: "figure.roll").foregroundColor(.red)
+                                Text("0 available").padding(5)
+                            }
+                            
+                        }
+                    }
+                }
             }
 //            .listStyle(InsetListStyle())
-            .navigationTitle("St. Anthony's Pr Sch")
+            .navigationTitle(busstop)
             .navigationBarTitleDisplayMode(.inline)
             .refreshable {
                 // This block is executed when the user pulls to refresh
@@ -98,6 +130,6 @@ struct bus_numberView: View {
   
 struct bus_numberView_Previews: PreviewProvider {
     static var previews: some View {
-        bus_numberView()
+        bus_numberView(busstop: "12")
     }
 }
