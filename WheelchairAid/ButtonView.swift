@@ -48,14 +48,12 @@ struct ButtonView: View {
          // Simulate a delay, replace with actual data refresh logic
          try? await Task.sleep(nanoseconds: 2) // Sleep for 2 seconds
          isRefreshing = false // End the refreshing state
-
-
      }
  }
 
 
-//struct SearchFunction_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ButtonView()
-//    }
-//}
+struct SearchFunction_Previews: PreviewProvider {
+    static var previews: some View {
+        ButtonView(names:["St. Anthony's Pr Sch", "Blk 347", "Opp Hometeamns", "Opp Blk 347", "Hometeamns", "Opp Blk 336", "Blk 334", "Blk 331", "Bt Batok Driving Ctr", "Opp Bt Gombbak Stn", "Bt Gombak Stn"],numbers:["43659" , "43581", "43641" , "43589", "43649","43839","43831", "43491" , "43521" ,"43571","43579"],roads:["BT BATOK ST 34","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 7","BK BATOK WEST AVE 7","BK BATOK WEST AVE 4","BT BATOK WEST AVE 5","BT BAKTOK WEST AVE 5","BT BATOK WEST AVE 5"])
+    }
+}
