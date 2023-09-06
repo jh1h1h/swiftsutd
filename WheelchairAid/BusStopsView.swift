@@ -8,25 +8,26 @@
 import SwiftUI
 
 struct BusStopsView: View {
+    var busNumber:String
     var body: some View {
         
                 List{
                     Section(header: HStack{
-                        Text("Upper Changi")
+                        Text("Changi Village Rd").font(.system(size: 15))
                         Spacer()
-                        Text("9A")
+                        Text(busNumber)
                     }){
                         HStack{
                             VStack(alignment: .leading){
-                                Text("Senkang Int").padding(.bottom,5)
-                                Text("67009")
+                                Text("Changi Village Ter").padding(.bottom,5)
+                                Text("99009")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("5 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.green)
-                                    Text("2 seats available")
+                                    Image(systemName: "figure.roll").foregroundColor(.green)
+                                    Text("2 available")
                                 }
                             }
                         }
@@ -36,11 +37,11 @@ struct BusStopsView: View {
                                 Text("67271")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("15 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.red)
-                                    Text("no seats available")
+                                    Image(systemName: "figure.roll").foregroundColor(.red)
+                                    Text("0 available")
                                 }
                             }
                         }
@@ -50,20 +51,20 @@ struct BusStopsView: View {
                                 Text("67009")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("18 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.green)
-                                    Text("1 seat available")
+                                    Image(systemName: "figure.roll").foregroundColor(.green)
+                                    Text("1 available")
                                 }
                             }
                         }
                         
                     }
                     Section(header: HStack{
-                        Text("Upper Changi")
+                        Text("Upper Changi").font(.system(size: 15))
                         Spacer()
-                        Text("9A")
+                        Text(busNumber)
                     }){
                         HStack{
                             VStack(alignment: .leading){
@@ -71,11 +72,11 @@ struct BusStopsView: View {
                                 Text("67009")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("5 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.green)
-                                    Text("2 seats available")
+                                    Image(systemName: "figure.roll").foregroundColor(.green)
+                                    Text("2 available")
                                 }
                             }
                         }
@@ -85,11 +86,11 @@ struct BusStopsView: View {
                                 Text("67271")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("15 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.red)
-                                    Text("no seats available")
+                                    Image(systemName: "figure.roll").foregroundColor(.red)
+                                    Text("0 available")
                                 }
                             }
                         }
@@ -99,20 +100,20 @@ struct BusStopsView: View {
                                 Text("67009")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("18 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.green)
-                                    Text("1 seat available")
+                                    Image(systemName: "figure.roll").foregroundColor(.green)
+                                    Text("1 available")
                                 }
                             }
                         }
                         
                     }
                     Section(header: HStack{
-                        Text("Upper Changi")
+                        Text("Jurong East").font(.system(size: 15))
                         Spacer()
-                        Text("9A")
+                        Text(busNumber)
                     }){
                         HStack{
                             VStack(alignment: .leading){
@@ -120,11 +121,11 @@ struct BusStopsView: View {
                                 Text("67009")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("5 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.green)
-                                    Text("2 seats available")
+                                    Image(systemName: "figure.roll").foregroundColor(.green)
+                                    Text("2 available")
                                 }
                             }
                         }
@@ -134,11 +135,11 @@ struct BusStopsView: View {
                                 Text("67271")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("15 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.red)
-                                    Text("no seats available")
+                                    Image(systemName: "figure.roll").foregroundColor(.red)
+                                    Text("0 available")
                                 }
                             }
                         }
@@ -148,23 +149,25 @@ struct BusStopsView: View {
                                 Text("67009")
                             }
                             Spacer()
-                            VStack{
+                            VStack(alignment: .trailing){
                                 Text("18 min").font(.system(size: 25))
                                 HStack{
-                                    Image(systemName: "circle.fill").foregroundColor(.green)
-                                    Text("1 seat available")
+                                    Image(systemName: "figure.roll").foregroundColor(.green)
+                                    Text("1 available")
                                 }
                             }
                         }
                     }
                     
                 }
-            
+//                .scrollContentBackground(.hidden)
+//                .background(Color.black)
+//
     }
     
     struct BusStopsView_Previews: PreviewProvider {
         static var previews: some View {
-            BusStopsView()
+            BusStopsView(busNumber: "123")
         }
     }
 }
