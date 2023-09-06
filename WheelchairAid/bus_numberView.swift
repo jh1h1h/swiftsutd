@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct bus_numberView: View {
+    var busstop:String
     @State private var isRefreshing = false 
     var busstop:String
     var body: some View {
@@ -19,6 +20,7 @@ struct bus_numberView: View {
                     } label: {
                         HStack{
                             Text("945").font(.system(size: 25))
+                                .bold()
                             Spacer()
                             VStack{
                                 Text("2 mins").padding(5)
@@ -35,6 +37,7 @@ struct bus_numberView: View {
                 } label: {
                     HStack{
                         Text("960").font(.system(size: 25))
+                            .bold()
                         Spacer()
                         VStack{
                             Text("5 mins").padding(5)
@@ -51,6 +54,7 @@ struct bus_numberView: View {
                 } label: {
                     HStack{
                         Text("187").font(.system(size: 25))
+                            .bold()
                         Spacer()
                         VStack{
                             Text("7 mins").padding(5)
@@ -67,9 +71,10 @@ struct bus_numberView: View {
                 } label: {
                     HStack{
                         Text("188").font(.system(size: 25))
+                            .bold()
                         Spacer()
                         VStack{
-                            Text("4 mins").padding(5)
+                            Text("15 mins").padding(5)
                             HStack{
                                 Image(systemName: "figure.roll").foregroundColor(.green)
                                 Text("2 available").padding(5)
