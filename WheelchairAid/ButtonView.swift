@@ -24,8 +24,8 @@ struct ButtonView: View {
                                     .padding(2)
                                     .font(.system(size: 15))
                                     .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.994, brightness: 0.586)/*@END_MENU_TOKEN@*/)
-                                Text(names[index])
-                                    .padding(2)
+                                Text(names[index]).bold()
+                                    .font(.system(size: 20))
                                 HStack{
                                     Image(systemName: "circle.fill")
                                         .font(.system(size: 5))
