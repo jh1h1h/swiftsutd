@@ -19,7 +19,7 @@ struct bus_numberView: View {
                         Text("map")
                     } label: {
                         HStack{
-                            Text("945")
+                            Text("945").font(.system(size: 25))
                             Spacer()
                             VStack{
                                 Text("2 mins").padding(5)
@@ -35,7 +35,7 @@ struct bus_numberView: View {
                     Text("map")
                 } label: {
                     HStack{
-                        Text("960")
+                        Text("960").font(.system(size: 25))
                         Spacer()
                         VStack{
                             Text("5 mins").padding(5)
@@ -51,7 +51,7 @@ struct bus_numberView: View {
                     Text("map")
                 } label: {
                     HStack{
-                        Text("187")
+                        Text("187").font(.system(size: 25))
                         Spacer()
                         VStack{
                             Text("7 mins").padding(5)
@@ -67,7 +67,7 @@ struct bus_numberView: View {
                     Text("map")
                 } label: {
                     HStack{
-                        Text("188")
+                        Text("188").font(.system(size: 25))
                         Spacer()
                         VStack{
                             Text("4 mins").padding(5)
