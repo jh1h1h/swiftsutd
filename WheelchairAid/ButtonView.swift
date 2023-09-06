@@ -17,7 +17,7 @@ struct ButtonView: View {
                 List {
                     ForEach(names.indices, id: \.self) { index in
                         NavigationLink {
-                            Text("Hi")
+                            bus_numberView(busstop: names[index])
                         } label: {
                             VStack(alignment: .leading){
                                 Text(numbers[index])

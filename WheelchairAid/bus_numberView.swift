@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct bus_numberView: View {
+    var busstop:String
     @State private var isRefreshing = false 
 
     var body: some View {
@@ -80,8 +81,8 @@ struct bus_numberView: View {
                 }
             }
 //            .listStyle(InsetListStyle())
-            .navigationTitle("St. Anthony's Pr Sch")
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(busstop)
+            .navigationBarTitleDisplayMode(.large)
             .refreshable {
                 // This block is executed when the user pulls to refresh
                 await refreshData() // Call your refresh data function here
@@ -98,6 +99,6 @@ struct bus_numberView: View {
   
 struct bus_numberView_Previews: PreviewProvider {
     static var previews: some View {
-        bus_numberView()
+        bus_numberView(busstop: "Test")
     }
 }
