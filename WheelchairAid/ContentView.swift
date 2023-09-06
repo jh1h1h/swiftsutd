@@ -14,7 +14,6 @@ struct ContentView: View {
         NavigationStack {
             TabView {
                 ButtonView()
-                    .badge(2)
                     .tabItem {
                         Label("Received", systemImage: "tray.and.arrow.down.fill")
                     }
@@ -27,6 +26,7 @@ struct ContentView: View {
                         .navigationTitle("Enter your bus stop")
                 }
                 .searchable(text: $searchText)
+        
 
         .padding()
     }

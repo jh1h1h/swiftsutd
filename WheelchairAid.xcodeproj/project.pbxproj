@@ -16,6 +16,7 @@
 		5407F6E32AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6E22AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift */; };
 		5407F6F02AA6BE1B00867491 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6EF2AA6BE1B00867491 /* ButtonView.swift */; };
 		5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6F32AA6C18100867491 /* ProfileView.swift */; };
+		CE8FEC792AA785C4009BA9DD /* bus_numberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		5407F6E22AA5A26300867491 /* WheelchairAidUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelchairAidUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5407F6EF2AA6BE1B00867491 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		5407F6F32AA6C18100867491 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bus_numberView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				5407F6C92AA5A26300867491 /* Assets.xcassets */,
 				5407F6CB2AA5A26300867491 /* Preview Content */,
 				5407F6EF2AA6BE1B00867491 /* ButtonView.swift */,
+				CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */,
 				5407F6F32AA6C18100867491 /* ProfileView.swift */,
 			);
 			path = WheelchairAid;
@@ -263,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8FEC792AA785C4009BA9DD /* bus_numberView.swift in Sources */,
 				5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */,
 				5407F6C82AA5A26100867491 /* ContentView.swift in Sources */,
 				5407F6C62AA5A26100867491 /* WheelchairAidApp.swift in Sources */,
