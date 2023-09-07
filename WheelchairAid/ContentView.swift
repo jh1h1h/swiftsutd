@@ -18,9 +18,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack(alignment: .leading){
-            Text("AID+")
-                .font(.system(size: 35))
-                .padding(.horizontal,20)
+            Text("Aid+").font(.system(size:25)).bold().offset(x: 20).foregroundColor(.white)
+            
             NavigationStack {
                 NavigationLink{
                     List {
@@ -50,22 +49,21 @@ struct ContentView: View {
                     .searchable(text: $searchText)
                 }label: {
                     ZStack{
-
-
-                                    RoundedRectangle(cornerRadius: 20.0)
-                                        .fill(.white)
-                                        .opacity(0.25)
-                                        .shadow(radius: 10.0)
-                                        .padding()
+                        
+                        
+                        RoundedRectangle(cornerRadius: 20.0)
+                            .fill(.white)
+                            .opacity(0.25)
+                            .shadow(radius: 10.0)
+                            .padding()
                         VStack{
-                            Text("Bus Station").font(.system(size: 30)).foregroundColor(.yellow).bold().offset(y:30)
+                            Text("Bus Station").font(.system(size: 23)).foregroundColor(.yellow).bold()
                             Image("bus_station").resizable().scaledToFit()
                                 .cornerRadius(10).padding(50).shadow(radius: 10)
                         }.offset(y: 30)
                     }
                 }
-
-
+                
                 NavigationLink{
                     List{
                         ForEach(searchResultsBusStop, id: \.self) { name in
@@ -84,7 +82,7 @@ struct ContentView: View {
                                     }
                                     else if(colors[index ?? 0]=="SMRT"){
                                         Text(colors[index ?? 0]).foregroundColor(.red)
-    }
+                                    }
                                     else{
                                         Text(colors[index ?? 0]).foregroundColor(.purple)
                                     }
@@ -105,13 +103,13 @@ struct ContentView: View {
                             .shadow(radius: 10.0)
                             .padding()
                         VStack{
-                            Text("Bus").font(.system(size: 30)).foregroundColor(.yellow).bold().offset(y:40)
+                            Text("Bus").font(.system(size: 23)).foregroundColor(.yellow).bold().offset(y:30)
                             Image("Bus").resizable().scaledToFit()
-                                .cornerRadius(10).padding(50).shadow(radius: 10).offset(y:-30)
+                                .cornerRadius(10).padding(50).shadow(radius: 10).offset(y:-20)
                         }.offset(y: 30)
                     }
                 }
-        }
+            }
         }
 }
     var searchResultsBus:[String]{
@@ -128,3 +126,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+

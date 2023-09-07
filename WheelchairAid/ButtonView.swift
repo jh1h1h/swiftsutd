@@ -16,9 +16,9 @@ struct ButtonView: View {
             NavigationStack {
                     List {
                         Section(header: Text("Nearby").font(.system(size: 15))){
-                        ForEach(names.indices, id: \.self) { index in
+                        ForEach(numbers.indices, id: \.self) { index in
                             NavigationLink {
-                                bus_numberView(busstop: names[index])
+                                bus_numberView(busstop: numbers[index])
                             } label: {
                                 VStack(alignment: .leading){
                                     Text(numbers[index]).padding(2)
