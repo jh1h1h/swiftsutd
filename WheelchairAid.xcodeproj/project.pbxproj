@@ -110,6 +110,7 @@
 		5407F6C42AA5A26100867491 /* WheelchairAid */ = {
 			isa = PBXGroup;
 			children = (
+				CE11752D2AA85C0300E3B5D6 /* BusStopsView.swift */,
 				5407F6C52AA5A26100867491 /* WheelchairAidApp.swift */,
 				5407F6C72AA5A26100867491 /* ContentView.swift */,
 				CE82F3D42AA92F2300C596B7 /* Final View.swift */,
@@ -289,6 +290,7 @@
 				5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */,
 				5407F6C82AA5A26100867491 /* ContentView.swift in Sources */,
 				5407F6C62AA5A26100867491 /* WheelchairAidApp.swift in Sources */,
+				CE11752E2AA85C0300E3B5D6 /* BusStopsView.swift in Sources */,
 				5407F6F02AA6BE1B00867491 /* ButtonView.swift in Sources */,
 				CE82F3D52AA92F2300C596B7 /* Final View.swift in Sources */,
 			);
