@@ -11,7 +11,7 @@ struct bus_numberView: View {
     var busstop:String
     var busNumbers = ["2","12E","21A","187","98A","268","268B","602","603","702","702A"]
     let availability = ["0", "1", "2", "0", "2", "1", "0", "2", "2", "1", "1"]
-    let minutes=["2","5","10","10","10","10","10","10","10","26","30"]
+    let minutes=["2","5","7","9","11","12","13","23","26","29","30"]
     @State private var isRefreshing = false
     var body: some View {
         NavigationStack {
@@ -19,7 +19,7 @@ struct bus_numberView: View {
             List{
                 ForEach(busNumbers.indices, id: \.self) { index in
                     NavigationLink {
-                        ContenttView(busnumer: busNumbers[index], availablity: availability[index])
+                        ContenttView(busnumer: busNumbers[index], availablity: availability[index],arrivingmin: minutes[index])
                     } label: {
                         HStack{
                             Text(busNumbers[index]).font(.system(size: 25))
