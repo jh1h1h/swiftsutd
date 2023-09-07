@@ -13,32 +13,32 @@ struct BusNumbersView: View {
     var body: some View {
         NavigationStack{
             List{
-                VStack(alignment: . leading){
-                    Text("Near By")
-                }
-                ForEach(busNumbers.indices, id: \.self) { index in
-                    NavigationLink {
-                        BusStopsView(busNumber: busNumbers[index])
-                    } label: {
-                        HStack{
-                            Text(busNumbers[index])
-                            Spacer()
-                            if(colors[index]=="GAS"){
-                                Text(colors[index]).foregroundColor(.yellow)
-                            }
-                            else if(colors[index]=="TTS"){
-                                Text(colors[index]).foregroundColor(.green)
-                            }
-                            else if(colors[index]=="SMRT"){
-                                Text(colors[index]).foregroundColor(.red)
-                            }
-                            else{
-                                Text(colors[index]).foregroundColor(.purple)
+                Section(header: Text("Nearby").font(.system(size: 15))){
+                    ForEach(busNumbers.indices, id: \.self) { index in
+                        NavigationLink {
+                            BusStopsView(busNumber: busNumbers[index])
+                        } label: {
+                            HStack{
+                                Text(busNumbers[index])
+                                Spacer()
+                                if(colors[index]=="GAS"){
+                                    Text(colors[index]).foregroundColor(.yellow)
+                                }
+                                else if(colors[index]=="TTS"){
+                                    Text(colors[index]).foregroundColor(.green)
+                                }
+                                else if(colors[index]=="SMRT"){
+                                    Text(colors[index]).foregroundColor(.red)
+                                }
+                                else{
+                                    Text(colors[index]).foregroundColor(.purple)
+                                }
                             }
                         }
+                        
                     }
-                    
                 }
+                
             }
             .navigationTitle("Bus Numbers")
             .navigationBarTitleDisplayMode(.inline)
