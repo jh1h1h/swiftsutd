@@ -12,27 +12,28 @@ struct BusNumbersView: View {
         NavigationStack{
             List{
                 
-                    ForEach(busNumbers.indices, id: \.self) { index in
+                    ForEach(busNumbers.unique, id: \.self) { bus in
                         NavigationLink {
-                            BusStopsView(busNumber: busNumbers[index])
+                            BusStopsView(busNumber: bus)
                                 
                         } label: {
+                            let index = busNumbers.firstIndex(of: bus)
                             HStack{
-                                Text(busNumbers[index])
+                                Text(bus)
                                     .font(.system(size: 18))
                                     .padding(.vertical,8)
                                 Spacer()
-                                if(colors[index]=="GAS"){
-                                    Text(colors[index]).foregroundColor(.yellow)
+                                if(colors[index ?? 0]=="GAS"){
+                                    Text(colors[index ?? 0]).foregroundColor(.yellow)
                                 }
-                                else if(colors[index]=="TTS"){
-                                    Text(colors[index]).foregroundColor(.green)
+                                else if(colors[index ?? 0]=="TTS"){
+                                    Text(colors[index ?? 0]).foregroundColor(.green)
                                 }
-                                else if(colors[index]=="SMRT"){
-                                    Text(colors[index]).foregroundColor(.red)
+                                else if(colors[index ?? 0]=="SMRT"){
+                                    Text(colors[index ?? 0]).foregroundColor(.red)
                                 }
                                 else{
-                                    Text(colors[index]).foregroundColor(.purple)
+                                    Text(colors[index ?? 0]).foregroundColor(.purple)
                                 }
                             }
                         }

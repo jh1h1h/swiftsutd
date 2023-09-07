@@ -16,20 +16,21 @@ struct ButtonView: View {
             NavigationStack {
                     List {
                         Section(header: Text("Nearby").font(.system(size: 15))){
-                        ForEach(numbers.indices, id: \.self) { index in
+                            ForEach(numbers.unique, id: \.self) { number in
                             NavigationLink {
-                                bus_numberView(busstop: numbers[index])
+                                bus_numberView(busstop: number)
                             } label: {
+                                let index = numbers.firstIndex(of: number)
                                 VStack(alignment: .leading){
-                                    Text(numbers[index]).padding(2)
+                                    Text(number).padding(2)
                                         .font(.system(size: 15))
                                         .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.97, brightness: 0.803)/*@END_MENU_TOKEN@*/)
-                                    Text(names[index]).bold().font(.system(size: 18))
+                                    Text(names[index ?? 0]).bold().font(.system(size: 18))
                                     HStack{
                                         Image(systemName: "circle.fill")
                                             .font(.system(size: 5))
                                             .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.994, brightness: 0.586)/*@END_MENU_TOKEN@*/)
-                                        Text(roads[index])
+                                        Text(roads[index ?? 0])
                                             .font(.system(size: 15)).padding(2)
                                     }
                                     
@@ -57,6 +58,6 @@ struct ButtonView: View {
 
 struct SearchFunction_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(names:["St. Anthony's Pr Sch", "Blk 347", "Opp Hometeamns", "Opp Blk 347", "Hometeamns", "Opp Blk 336", "Blk 334", "Blk 331", "Bt Batok Driving Ctr", "Opp Bt Gombbak Stn", "Bt Gombak Stn"],numbers:["43659" , "43581", "43641" , "43589", "43649","43839","43831", "43491" , "43521" ,"43571","43579"],roads:["BT BATOK ST 34","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 7","BK BATOK WEST AVE 7","BK BATOK WEST AVE 4","BT BATOK WEST AVE 5","BT BAKTOK WEST AVE 5","BT BATOK WEST AVE 5"])
+        ButtonView(names: names, numbers: numbers, roads: roads)
     }
 }

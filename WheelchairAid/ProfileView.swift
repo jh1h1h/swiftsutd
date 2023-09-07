@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
+    func getCSVData() -> Array<String> {
+        do {
+            let content = try String(contentsOfFile: "./bus_routes.csv")
+            let parsedCSV: [String] = content.components(
+                separatedBy: "\n"
+            ).map{ $0.components(separatedBy: ",")[0] }
+            return parsedCSV
+        }
+        catch {
+            return []
+        }
+    }
     var body: some View {
-        Image("ProfilePicture")
+        let data = getCSVData()
+        Text(data.description)
     }
 }
 

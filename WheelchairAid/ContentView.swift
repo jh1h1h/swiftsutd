@@ -9,12 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var searchText = ""
-    let names = ["St. Anthony's Pr Sch", "Blk 347", "Opp Hometeamns", "Opp Blk 347", "Hometeamns", "Opp Blk 336", "Blk 334", "Blk 331", "Bt Batok Driving Ctr", "Opp Bt Gombbak Stn", "Bt Gombak Stn"]
-    let numbers = ["43659" , "43581", "43641" , "43589", "43649","43839","43831", "43491" , "43521" ,"43571","43579"]
-    let roads = ["BT BATOK ST 34","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 7","BK BATOK WEST AVE 7","BK BATOK WEST AVE 4","BT BATOK WEST AVE 5","BT BAKTOK WEST AVE 5","BT BATOK WEST AVE 5"]
-    let availability = [0, 1, 2, 0, 2, 1, 0, 2, 2, 1, 1]
-    let busNumbers = ["2","12E","21A","187","98A","268","268B","602","603","702","702A"]
-    let colors  = ["GAS","GAS","SBS","SMRT","TTS","SBS","SBS","GAS","TTS","SMRT","SMRT"]
     
     var body: some View {
         VStack(alignment: .leading){

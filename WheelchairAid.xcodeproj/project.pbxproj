@@ -17,6 +17,7 @@
 		5407F6F02AA6BE1B00867491 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6EF2AA6BE1B00867491 /* ButtonView.swift */; };
 		5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6F32AA6C18100867491 /* ProfileView.swift */; };
 		5407F7002AA9BB7A00867491 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6FF2AA9BB7A00867491 /* Data.swift */; };
+		54218D0D2AAA38C200D9EA7C /* bus_routes.csv in Resources */ = {isa = PBXBuildFile; fileRef = 54218D0C2AAA38C200D9EA7C /* bus_routes.csv */; };
 		CE82F3D32AA87B7400C596B7 /* BusNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3D22AA87B7400C596B7 /* BusNumbersView.swift */; };
 		CE82F3D52AA92F2300C596B7 /* Final View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3D42AA92F2300C596B7 /* Final View.swift */; };
 		CE8FEC792AA785C4009BA9DD /* bus_numberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */; };
@@ -55,6 +56,7 @@
 		5407F6EF2AA6BE1B00867491 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		5407F6F32AA6C18100867491 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		5407F6FF2AA9BB7A00867491 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		54218D0C2AAA38C200D9EA7C /* bus_routes.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bus_routes.csv; sourceTree = "<group>"; };
 		CE82F3D22AA87B7400C596B7 /* BusNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusNumbersView.swift; sourceTree = "<group>"; };
 		CE82F3D42AA92F2300C596B7 /* Final View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Final View.swift"; sourceTree = "<group>"; };
 		CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bus_numberView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 		5407F6C42AA5A26100867491 /* WheelchairAid */ = {
 			isa = PBXGroup;
 			children = (
+				54218D0C2AAA38C200D9EA7C /* bus_routes.csv */,
 				5407F6FE2AA9BB4100867491 /* Model */,
 				5407F6C52AA5A26100867491 /* WheelchairAidApp.swift */,
 				5407F6C72AA5A26100867491 /* ContentView.swift */,
@@ -265,6 +268,7 @@
 			files = (
 				5407F6CD2AA5A26300867491 /* Preview Assets.xcassets in Resources */,
 				5407F6CA2AA5A26300867491 /* Assets.xcassets in Resources */,
+				54218D0D2AAA38C200D9EA7C /* bus_routes.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
