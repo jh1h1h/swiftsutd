@@ -45,12 +45,22 @@ struct ContentView: View {
                 .navigationTitle("Search for bus stop")
                 .searchable(text: $searchText)
             }label: {
-                VStack{
-                    Text("Bus Station").font(.system(size: 23)).foregroundColor(.black).bold()
-                    Image("bus_station").resizable().scaledToFit()
-                        .cornerRadius(10).padding(10).shadow(radius: 10)
-                }.offset(y: 30)
+                ZStack{
+
+
+                                RoundedRectangle(cornerRadius: 20.0)
+                                    .fill(.white)
+                                    .opacity(0.25)
+                                    .shadow(radius: 10.0)
+                                    .padding()
+                    VStack{
+                        Text("Bus Station").font(.system(size: 23)).foregroundColor(.yellow).bold()
+                        Image("bus_station").resizable().scaledToFit()
+                            .cornerRadius(10).padding(50).shadow(radius: 10)
+                    }.offset(y: 30)
+                }
             }
+
 
             NavigationLink{
                 List{
@@ -70,7 +80,7 @@ struct ContentView: View {
                                 }
                                 else if(colors[index ?? 0]=="SMRT"){
                                     Text(colors[index ?? 0]).foregroundColor(.red)
-                                }
+}
                                 else{
                                     Text(colors[index ?? 0]).foregroundColor(.purple)
                                 }
@@ -82,12 +92,21 @@ struct ContentView: View {
                 .navigationTitle("Search for Bus Numbers")
                 .searchable(text: $searchText)
             }label: {
-                VStack{
-                    Text("Bus Number").font(.system(size: 23 )).foregroundColor(.black).bold()
-                    Image("Bus").resizable().scaledToFit()
-                        .cornerRadius(10).padding(10).shadow(radius:10).offset(y: -50)
-                }.offset(y: 30)
-        }
+                ZStack{
+                    
+                    
+                    RoundedRectangle(cornerRadius: 20.0)
+                        .fill(.white)
+                        .opacity(0.25)
+                        .shadow(radius: 10.0)
+                        .padding()
+                    VStack{
+                        Text("Bus").font(.system(size: 23)).foregroundColor(.yellow).bold().offset(y:40)
+                        Image("Bus").resizable().scaledToFit()
+                            .cornerRadius(10).padding(50).shadow(radius: 10).offset(y:-10)
+                    }.offset(y: 30)
+                }
+            }
     }
 }
     var searchResultsBus:[String]{
