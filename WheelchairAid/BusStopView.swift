@@ -30,6 +30,10 @@ struct BusStopsView: View {
         let arriving: String
         var id: String
     }
+    private struct RoadType: Identifiable {
+        let road: String
+        var id: String
+    }
     
     private func findByBusStop(number: String)-> [Bus]{
         var arr:[Bus] = []
@@ -51,179 +55,47 @@ struct BusStopsView: View {
         }
         return arr
     }
-    private func getUniqueRoads(info: [Bus])->[String]{
-        return info.map{$0.road}.unique
+    private func getUniqueRoads(info: [Bus])->[RoadType]{
+        var arr1 = info.map{$0.road}.unique
+        var arr2:[RoadType] = []
+        for i in 0...arr1.count-1{
+            arr2.append(RoadType(road: arr1[i],id: String(i)))
+        }
+        return arr2
     }
     
     var body: some View {
         let info:[Bus] = findByBusStop(number: busNumber)
         List{
-//            ForEach(info){ bus in
-//                HStack{
-//                    VStack(alignment: .leading){
-//                        Text(bus.name).padding(.vertical,5)
-//                        Text(bus.number).padding(.vertical,5)
-//                    }
-//                    Spacer()
-//                    VStack(alignment: .trailing){
-//                        Text(bus.arriving + " mins").font(.system(size: 25))
-//                        HStack{
-//                            if bus.avail == "0"{
-//                                Image(systemName: "figure.roll").foregroundColor(.red)
-//                            }else{
-//                                Image(systemName: "figure.roll").foregroundColor(.green)
-//                            }
-//                            Text(bus.avail + " available")
-//                        }
-//                    }
-//                }
-//            }
-            Section(header: HStack{
-                Text("Changi Village Rd").font(.system(size: 15))
-                Spacer()
-                Text(busNumber)
-            }){
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Changi Village Ter").padding(.vertical,5)
-                        Text("99009").padding(.vertical,5)
-                    }
+            ForEach(getUniqueRoads(info:info)) { data in
+//                Text(data.road)
+                Section(header: HStack{
+                    Text(data.road).font(.system(size: 15))
                     Spacer()
-                    VStack(alignment: .trailing){
-                        Text("5 mins").font(.system(size: 25))
+                    Text(busNumber)
+                }){
+                    let info2:[Bus] = findByRoad(road: data.road)
+                    ForEach(info2){ bus in
                         HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.green)
-                            Text("2 available")
+                            VStack(alignment: .leading){
+                                Text(bus.name).padding(.vertical,5)
+                                Text(bus.number).padding(.vertical,5)
+                            }
+                            Spacer()
+                            VStack(alignment: .trailing){
+                                Text(bus.arriving + " mins").font(.system(size: 25))
+                                HStack{
+                                    if bus.avail == "0"{
+                                        Image(systemName: "figure.roll").foregroundColor(.red)
+                                    }else{
+                                        Image(systemName: "figure.roll").foregroundColor(.green)
+                                    }
+                                    Text(bus.avail + " available")
+                                }
+                            }
                         }
                     }
                 }
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Blk 201 Cp").padding(.vertical,5)
-                        Text("67271").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("15 mins").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.red)
-                            Text("0 available")
-                        }
-                    }
-                }
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Senkang Int").padding(.vertical,5)
-                        Text("67009").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("18 mins").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.green)
-                            Text("1 available")
-                        }
-                    }
-                }
-
-            }
-            Section(header: HStack{
-                Text("Upp Changi Rd East").font(.system(size: 15))
-                Spacer()
-                Text(busNumber)
-            }){
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Changi Golf Course").padding(.vertical,5)
-                        Text("99049").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("2 mins").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.red)
-                            Text("0 available")
-                        }
-                    }
-                }
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("St. George Chapel").padding(.vertical,5)
-                        Text("99039").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("3 mins").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.green)
-                            Text("2 available")
-                        }
-                    }
-                }
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Senkang Int").padding(.vertical,5)
-                        Text("67009").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("18 mins").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.green)
-                            Text("1 available")
-                        }
-                    }
-                }
-
-            }
-            Section(header: HStack{
-                Text("Bedok Rd").font(.system(size: 15))
-                Spacer()
-                Text(busNumber)
-            }){
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Changi Village Ter").padding(.vertical,5)
-                        Text("99009").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("5 min").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.green)
-                            Text("2 available")
-                        }
-                    }
-                }
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Blk 201 Cp").padding(.vertical,5)
-                        Text("67271").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("15 min").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.red)
-                            Text("0 available")
-                        }
-                    }
-                }
-                HStack{
-                    VStack(alignment: .leading){
-                        Text("Senkang Int").padding(.vertical,5)
-                        Text("67009").padding(.vertical,5)
-                    }
-                    Spacer()
-                    VStack(alignment: .trailing){
-                        Text("18 min").font(.system(size: 25))
-                        HStack{
-                            Image(systemName: "figure.roll").foregroundColor(.green)
-                            Text("1 available")
-                        }
-                    }
-                }
-
             }
         }
     }
