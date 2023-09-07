@@ -18,7 +18,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack {
-            NavigationLink("Bus Stop"){
+            NavigationLink{
                 List {
                     ForEach(searchResultsBus, id: \.self) { name in
                         NavigationLink {
@@ -44,8 +44,15 @@ struct ContentView: View {
                 }
                 .navigationTitle("Search for bus stop")
                 .searchable(text: $searchText)
+            }label: {
+                VStack{
+                    Text("Bus Station").font(.system(size: 30)).foregroundColor(.black).bold()
+                    Image("bus_station").resizable().scaledToFit()
+                        .cornerRadius(10).padding(10).shadow(radius: 10)
+                }.offset(y: 30)
             }
-            NavigationLink("Bus Number"){
+
+            NavigationLink{
                 List{
                     ForEach(searchResultsBusStop, id: \.self) { name in
                         NavigationLink {
@@ -74,6 +81,12 @@ struct ContentView: View {
                 }
                 .navigationTitle("Search for Bus Numbers")
                 .searchable(text: $searchText)
+            }label: {
+                VStack{
+                    Text("Bus Number").font(.system(size: 30 )).foregroundColor(.black).bold()
+                    Image("Bus").resizable().scaledToFit()
+                        .cornerRadius(10).padding(10).shadow(radius:10).offset(y: -50)
+                }.offset(y: 30)
         }
     }
 }
