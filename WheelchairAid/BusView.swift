@@ -19,8 +19,8 @@ struct BusStopsView: View {
             }){
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Changi Village Ter").padding(.bottom,5)
-                        Text("99009")
+                        Text("Changi Village Ter").padding(.vertical,5)
+                        Text("99009").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -33,8 +33,8 @@ struct BusStopsView: View {
                 }
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Blk 201 Cp").padding(.bottom,10)
-                        Text("67271")
+                        Text("Blk 201 Cp").padding(.vertical,5)
+                        Text("67271").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -47,8 +47,8 @@ struct BusStopsView: View {
                 }
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Senkang Int").padding(.bottom,10)
-                        Text("67009")
+                        Text("Senkang Int").padding(.vertical,5)
+                        Text("67009").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -68,8 +68,8 @@ struct BusStopsView: View {
             }){
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Changi Golf Course").padding(.bottom,5)
-                        Text("99049")
+                        Text("Changi Golf Course").padding(.vertical,5)
+                        Text("99049").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -82,8 +82,8 @@ struct BusStopsView: View {
                 }
                 HStack{
                     VStack(alignment: .leading){
-                        Text("St. George Chapel").padding(.bottom,10)
-                        Text("99039")
+                        Text("St. George Chapel").padding(.vertical,5)
+                        Text("99039").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -96,8 +96,8 @@ struct BusStopsView: View {
                 }
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Senkang Int").padding(.bottom,10)
-                        Text("67009")
+                        Text("Senkang Int").padding(.vertical,5)
+                        Text("67009").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -117,8 +117,8 @@ struct BusStopsView: View {
             }){
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Changi Village Ter").padding(.bottom,5)
-                        Text("99009")
+                        Text("Changi Village Ter").padding(.vertical,5)
+                        Text("99009").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -131,8 +131,8 @@ struct BusStopsView: View {
                 }
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Blk 201 Cp").padding(.bottom,10)
-                        Text("67271")
+                        Text("Blk 201 Cp").padding(.vertical,5)
+                        Text("67271").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
@@ -145,8 +145,8 @@ struct BusStopsView: View {
                 }
                 HStack{
                     VStack(alignment: .leading){
-                        Text("Senkang Int").padding(.bottom,10)
-                        Text("67009")
+                        Text("Senkang Int").padding(.vertical,5)
+                        Text("67009").padding(.vertical,5)
                     }
                     Spacer()
                     VStack(alignment: .trailing){
