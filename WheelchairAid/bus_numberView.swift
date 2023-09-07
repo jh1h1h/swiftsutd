@@ -9,53 +9,34 @@ import SwiftUI
 
 struct bus_numberView: View {
     var busstop:String
-    private struct Bus: Identifiable {
-        let name: String
-        let number: String
-        let road: String
-        let avail: String
-        let busNumber: String
-        let color: String
-        let arriving: String
-        var id: String
-    }
-    
-    private func findByBusStop(number: String)-> [Bus]{
-        var arr:[Bus] = []
-        for i in 0...(numbers.count - 1){
-            if numbers[i] == busstop{
-                arr.append(Bus(name: names[i], number: numbers[i], road: roads[i], avail: availability[i], busNumber: busNumbers[i], color: colors[i], arriving: arriving[i], id: String(i)))
-//                arr.append([names[i], numbers[i], roads[i], availability[i], busNumbers[i], colors[i]])
-            }
-        }
-        return arr
-    }
+    var busNumbers = ["2","12E","21A","187","98A","268","268B","602","603","702","702A"]
+    let availability = ["0", "1", "2", "0", "2", "1", "0", "2", "2", "1", "1"]
+    let minutes=["2","5","10","10","10","10","10","10","10","26","30"]
     @State private var isRefreshing = false
     var body: some View {
-        let info:[Bus] = findByBusStop(number: busstop)
         NavigationStack {
                 
             List{
-                ForEach(info) { bus in
+                ForEach(busNumbers.indices, id: \.self) { index in
                     NavigationLink {
-                        ContenttView(busnumer: bus.busNumber, availablity: bus.avail,arrivingmin: bus.arriving)
+                        ContenttView(busnumer: busNumbers[index], availability: availability[index],arrivingMin: minutes[index])
                     } label: {
                         HStack{
-                            Text(bus.busNumber).font(.system(size: 25))
+                            Text(busNumbers[index]).font(.system(size: 25))
                                 .bold()
                             Spacer()
                             VStack(alignment: . trailing){
-                                Text(bus.arriving+" mins").padding(5)
-                                if(bus.avail=="0"){
+                                Text(minutes[index]+" mins").padding(5)
+                                if( availability[index]=="0"){
                                     HStack{
                                         Image(systemName: "figure.roll").foregroundColor(.red)
-                                        Text(bus.avail+" available").padding(5)
+                                        Text(availability[index]+" available").padding(5)
                                     }
                                 }
                                 else{
                                     HStack{
                                         Image(systemName: "figure.roll").foregroundColor(.green)
-                                        Text(bus.avail+" available").padding(5)
+                                        Text(availability[index]+" available").padding(5)
                                     }
                                 }
                                 
@@ -83,6 +64,6 @@ struct bus_numberView: View {
   
 struct bus_numberView_Previews: PreviewProvider {
     static var previews: some View {
-        bus_numberView(busstop: "43659")
+        bus_numberView(busstop: "12")
     }
 }
