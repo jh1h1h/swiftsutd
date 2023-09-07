@@ -78,14 +78,28 @@ struct MapView: UIViewRepresentable {
 struct ContenttView: View {
     var busnumer:String
     var availablity:String
+    var arrivingmin:String
     @State private var sourceCoordinate = CLLocationCoordinate2D(latitude: 1.363758, longitude: 103.749334)
     @State private var destinationCoordinate = CLLocationCoordinate2D(latitude: 1.372387, longitude: 103.752868)
     var body: some View {
         VStack{
             MapView(sourceCoordinate: $sourceCoordinate, destinationCoordinate: $destinationCoordinate)
                 .frame(width: 400,height: 300)
-            Text("Bus \(busnumer) has \(availablity) booth(s)").font(.system(size: 20))
-        }.offset(y:-150)
+            VStack{
+                Text("Bus Number:   \(busnumer)")
+                Text("Arrving in \(arrivingmin) mins")
+                if(availablity=="0"){
+                    HStack{
+                        Image(systemName: "figure.roll").foregroundColor(.red)
+                        Text("0 booth available")}
+                }
+                else{
+                    HStack{
+                        Image(systemName: "figure.roll").foregroundColor(.green)
+                        Text("\(availablity) booth(s) available")}
+                }
+            }.font(.system(size: 20))
+        }.offset(y:-120)
             .navigationTitle("Bus Route")
             .navigationBarTitleDisplayMode(.large)
             .padding(.horizontal,20)
@@ -93,6 +107,6 @@ struct ContenttView: View {
 }
 struct MapShowView_Previews: PreviewProvider {
     static var previews: some View {
-        ContenttView(busnumer: "444", availablity: "2")
+        ContenttView(busnumer: "444", availablity: "2",arrivingmin: "2")
     }
 }
