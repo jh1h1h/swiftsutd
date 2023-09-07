@@ -19,7 +19,7 @@ struct bus_numberView: View {
             List{
                 ForEach(busNumbers.indices, id: \.self) { index in
                     NavigationLink {
-                        ContenttView(busnumer: busNumbers[index], availablity: availability[index],arrivingmin: minutes[index])
+                        ContenttView(busnumer: busNumbers[index], availability: availability[index],arrivingMin: minutes[index])
                     } label: {
                         HStack{
                             Text(busNumbers[index]).font(.system(size: 25))
