@@ -18,7 +18,6 @@
 		5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5407F6F32AA6C18100867491 /* ProfileView.swift */; };
 		CE82F3D32AA87B7400C596B7 /* BusNumbersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3D22AA87B7400C596B7 /* BusNumbersView.swift */; };
 		CE82F3D52AA92F2300C596B7 /* Final View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3D42AA92F2300C596B7 /* Final View.swift */; };
-		CE82F3D72AA933F600C596B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3D62AA933F600C596B7 /* HomeView.swift */; };
 		CE8FEC792AA785C4009BA9DD /* bus_numberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */; };
 		CE8FEC7D2AA823E6009BA9DD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC7C2AA823E6009BA9DD /* MapView.swift */; };
 		CE8FEC812AA852CD009BA9DD /* BusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC802AA852CD009BA9DD /* BusStopView.swift */; };
@@ -56,7 +55,6 @@
 		5407F6F32AA6C18100867491 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CE82F3D22AA87B7400C596B7 /* BusNumbersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusNumbersView.swift; sourceTree = "<group>"; };
 		CE82F3D42AA92F2300C596B7 /* Final View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Final View.swift"; sourceTree = "<group>"; };
-		CE82F3D62AA933F600C596B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bus_numberView.swift; sourceTree = "<group>"; };
 		CE8FEC7C2AA823E6009BA9DD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		CE8FEC802AA852CD009BA9DD /* BusStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopView.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				5407F6C92AA5A26300867491 /* Assets.xcassets */,
 				5407F6CB2AA5A26300867491 /* Preview Content */,
 				5407F6EF2AA6BE1B00867491 /* ButtonView.swift */,
-				CE82F3D62AA933F600C596B7 /* HomeView.swift */,
 				CE8FEC802AA852CD009BA9DD /* BusStopView.swift */,
 				CE82F3D22AA87B7400C596B7 /* BusNumbersView.swift */,
 				CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */,
@@ -284,7 +281,6 @@
 				CE82F3D32AA87B7400C596B7 /* BusNumbersView.swift in Sources */,
 				CE8FEC812AA852CD009BA9DD /* BusStopView.swift in Sources */,
 				CE8FEC792AA785C4009BA9DD /* bus_numberView.swift in Sources */,
-				CE82F3D72AA933F600C596B7 /* HomeView.swift in Sources */,
 				CE8FEC7D2AA823E6009BA9DD /* MapView.swift in Sources */,
 				5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */,
 				5407F6C82AA5A26100867491 /* ContentView.swift in Sources */,

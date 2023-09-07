@@ -13,10 +13,6 @@ struct Final_View: View {
     let roads = ["BT BATOK ST 34","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 5","BT BATOK WEST AVE 7","BT BATOK WEST AVE 7","BK BATOK WEST AVE 7","BK BATOK WEST AVE 4","BT BATOK WEST AVE 5","BT BAKTOK WEST AVE 5","BT BATOK WEST AVE 5"]
     var body: some View {
         TabView {
-            Home_View()
-                .tabItem {
-                    Label("Home", systemImage: "house.fill")
-                }
             ContentView()
                 .tabItem {
                     Label("Search", systemImage: "magnifyingglass")
@@ -29,7 +25,7 @@ struct Final_View: View {
                 .tabItem {
                     Label("Bus", systemImage: "bus.fill")
                 }
-        }
+        }.preferredColorScheme(.dark)
     }
 }
 
