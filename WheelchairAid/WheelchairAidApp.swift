@@ -11,7 +11,13 @@ import SwiftUI
 struct WheelchairAidApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Final_View()
         }
     }
 }
+struct WheelchairAidApp_Previews: PreviewProvider {
+    static var previews: some View {
+        Final_View()
+    }
+}
+
