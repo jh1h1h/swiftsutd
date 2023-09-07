@@ -74,7 +74,7 @@ struct BusStopsView: View {
                     Spacer()
                     Text(busNumber)
                 }){
-                    let info2:[Bus] = findByRoad(road: data.road)
+                    let info2:[Bus] = info.filter{$0.road == data.road}
                     ForEach(info2){ bus in
                         HStack{
                             VStack(alignment: .leading){
@@ -101,7 +101,7 @@ struct BusStopsView: View {
     }
                             struct BusStopsView_Previews: PreviewProvider {
                                    static var previews: some View {
-                                       BusStopsView(busNumber: "702A")
+                                       BusStopsView(busNumber: "2")
                                    }
                                }
                            }

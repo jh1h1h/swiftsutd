@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct BusNumbersView: View {
-    var busNumbers = ["2","12E","21A","187","98A","268","268B","602","603","702","702A"]
-    var colors  = ["GAS","GAS","SBS","SMRT","TTS","SBS","SBS","GAS","TTS","SMRT","SMRT"]
     var body: some View {
         NavigationStack{
             List{
