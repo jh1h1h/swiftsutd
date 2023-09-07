@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+extension Array where Element: Equatable {
+    var unique: [Element] {
+        var uniqueValues: [Element] = []
+        forEach { item in
+            guard !uniqueValues.contains(item) else { return }
+            uniqueValues.append(item)
+        }
+        return uniqueValues
+    }
+}
+
 struct BusStopsView: View {
     var busNumber:String
     private struct Bus: Identifiable {
@@ -23,13 +34,27 @@ struct BusStopsView: View {
     private func findByBusStop(number: String)-> [Bus]{
         var arr:[Bus] = []
         for i in 0...(busNumbers.count - 1){
-            if busNumbers[i] == busNumber{
+            if busNumbers[i] == number{
                 arr.append(Bus(name: names[i], number: numbers[i], road: roads[i], avail: availability[i], busNumber: busNumbers[i], color: colors[i], arriving: arriving[i], id: String(i)))
 //                arr.append([names[i], numbers[i], roads[i], availability[i], busNumbers[i], colors[i]])
             }
         }
         return arr
     }
+    private func findByRoad(road: String)-> [Bus]{
+        var arr:[Bus] = []
+        for i in 0...(roads.count - 1){
+            if roads[i] == road{
+                arr.append(Bus(name: names[i], number: numbers[i], road: roads[i], avail: availability[i], busNumber: busNumbers[i], color: colors[i], arriving: arriving[i], id: String(i)))
+//                arr.append([names[i], numbers[i], roads[i], availability[i], busNumbers[i], colors[i]])
+            }
+        }
+        return arr
+    }
+    private func getUniqueRoads(info: [Bus])->[String]{
+        return info.map{$0.road}.unique
+    }
+    
     var body: some View {
         let info:[Bus] = findByBusStop(number: busNumber)
         List{
