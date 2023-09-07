@@ -17,9 +17,12 @@ struct BusNumbersView: View {
                     ForEach(busNumbers.indices, id: \.self) { index in
                         NavigationLink {
                             BusStopsView(busNumber: busNumbers[index])
+                                
                         } label: {
                             HStack{
                                 Text(busNumbers[index])
+                                    .font(.system(size: 18))
+                                    .padding(.vertical,8)
                                 Spacer()
                                 if(colors[index]=="GAS"){
                                     Text(colors[index]).foregroundColor(.yellow)
@@ -35,7 +38,6 @@ struct BusNumbersView: View {
                                 }
                             }
                         }
-                        
                     }
                 }
                 

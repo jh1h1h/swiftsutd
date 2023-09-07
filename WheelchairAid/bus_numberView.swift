@@ -87,6 +87,7 @@ struct bus_numberView: View {
                 } label: {
                     HStack{
                         Text("987").font(.system(size: 25))
+                            .bold()
                         Spacer()
                         VStack(alignment: .trailing){
                             Text("4 mins").padding(5)
@@ -103,6 +104,7 @@ struct bus_numberView: View {
                 } label: {
                     HStack{
                         Text("75").font(.system(size: 25))
+                            .bold()
                         Spacer()
                         VStack(alignment: . trailing){
                             Text("4 mins").padding(5)
