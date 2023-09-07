@@ -13,7 +13,6 @@ struct BusNumbersView: View {
     var body: some View {
         NavigationStack{
             List{
-                Section(header: Text("Nearby").font(.system(size: 15))){
                     ForEach(busNumbers.indices, id: \.self) { index in
                         NavigationLink {
                             BusStopsView(busNumber: busNumbers[index])
@@ -39,7 +38,7 @@ struct BusNumbersView: View {
                             }
                         }
                     }
-                }
+                
                 
             }
             .navigationTitle("Bus Numbers")
