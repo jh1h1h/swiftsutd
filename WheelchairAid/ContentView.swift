@@ -17,7 +17,7 @@ struct ContentView: View {
     let colors  = ["GAS","GAS","SBS","SMRT","TTS","SBS","SBS","GAS","TTS","SMRT","SMRT"]
     
     var body: some View {
-        VStack(){
+        VStack(alignment: .leading){
             Text("AID+")
                 .font(.system(size: 35))
                 .padding(.horizontal,20)
@@ -58,7 +58,7 @@ struct ContentView: View {
                                         .shadow(radius: 10.0)
                                         .padding()
                         VStack{
-                            Text("Bus Station").font(.system(size: 23)).foregroundColor(.yellow).bold()
+                            Text("Bus Station").font(.system(size: 30)).foregroundColor(.yellow).bold().offset(y:30)
                             Image("bus_station").resizable().scaledToFit()
                                 .cornerRadius(10).padding(50).shadow(radius: 10)
                         }.offset(y: 30)
@@ -105,9 +105,9 @@ struct ContentView: View {
                             .shadow(radius: 10.0)
                             .padding()
                         VStack{
-                            Text("Bus").font(.system(size: 23)).foregroundColor(.yellow).bold().offset(y:40)
+                            Text("Bus").font(.system(size: 30)).foregroundColor(.yellow).bold().offset(y:40)
                             Image("Bus").resizable().scaledToFit()
-                                .cornerRadius(10).padding(50).shadow(radius: 10).offset(y:-10)
+                                .cornerRadius(10).padding(50).shadow(radius: 10).offset(y:-30)
                         }.offset(y: 30)
                     }
                 }
