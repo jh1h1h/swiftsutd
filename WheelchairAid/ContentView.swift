@@ -46,7 +46,7 @@ struct ContentView: View {
                 .searchable(text: $searchText)
             }label: {
                 VStack{
-                    Text("Bus Station").font(.system(size: 30)).foregroundColor(.black).bold()
+                    Text("Bus Station").font(.system(size: 23)).foregroundColor(.black).bold()
                     Image("bus_station").resizable().scaledToFit()
                         .cornerRadius(10).padding(10).shadow(radius: 10)
                 }.offset(y: 30)
@@ -83,7 +83,7 @@ struct ContentView: View {
                 .searchable(text: $searchText)
             }label: {
                 VStack{
-                    Text("Bus Number").font(.system(size: 30 )).foregroundColor(.black).bold()
+                    Text("Bus Number").font(.system(size: 23 )).foregroundColor(.black).bold()
                     Image("Bus").resizable().scaledToFit()
                         .cornerRadius(10).padding(10).shadow(radius:10).offset(y: -50)
                 }.offset(y: 30)
