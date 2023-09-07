@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct BusNumbersView: View {
-    var busNumbers = ["2","12E","21A","187","98A"]
-    var colors  = ["GAS","GAS","SBS","SMRT","TTS"]
+    var busNumbers = ["2","12E","21A","187","98A","268","268B","602","603","702","702A"]
+    var colors  = ["GAS","GAS","SBS","SMRT","TTS","SBS","SBS","GAS","TTS","SMRT","SMRT"]
     var body: some View {
         NavigationStack{
             List{
@@ -23,7 +23,18 @@ struct BusNumbersView: View {
                         HStack{
                             Text(busNumbers[index])
                             Spacer()
-                            Text(colors[index])
+                            if(colors[index]=="GAS"){
+                                Text(colors[index]).foregroundColor(.yellow)
+                            }
+                            else if(colors[index]=="TTS"){
+                                Text(colors[index]).foregroundColor(.green)
+                            }
+                            else if(colors[index]=="SMRT"){
+                                Text(colors[index]).foregroundColor(.red)
+                            }
+                            else{
+                                Text(colors[index]).foregroundColor(.purple)
+                            }
                         }
                     }
                     
