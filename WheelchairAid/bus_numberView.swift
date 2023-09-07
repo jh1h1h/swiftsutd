@@ -10,19 +10,18 @@ import SwiftUI
 struct bus_numberView: View {
     var busstop:String
     @State private var isRefreshing = false 
-    var busstop:String
     var body: some View {
         NavigationStack {
-        
+                
             List{
                     NavigationLink {
-                        Text("map")
+                        Text("hi")
                     } label: {
                         HStack{
                             Text("945").font(.system(size: 25))
                                 .bold()
                             Spacer()
-                            VStack{
+                            VStack(alignment: . trailing){
                                 Text("2 mins").padding(5)
                                 HStack{
                                     Image(systemName: "figure.roll").foregroundColor(.green)
@@ -39,7 +38,7 @@ struct bus_numberView: View {
                         Text("960").font(.system(size: 25))
                             .bold()
                         Spacer()
-                        VStack{
+                        VStack(alignment: . trailing){
                             Text("5 mins").padding(5)
                             HStack{
                                 Image(systemName: "figure.roll").foregroundColor(.red)
@@ -56,7 +55,7 @@ struct bus_numberView: View {
                         Text("187").font(.system(size: 25))
                             .bold()
                         Spacer()
-                        VStack{
+                        VStack(alignment: .trailing){
                             Text("7 mins").padding(5)
                             HStack{
                                 Image(systemName: "figure.roll").foregroundColor(.green)
@@ -73,7 +72,7 @@ struct bus_numberView: View {
                         Text("188").font(.system(size: 25))
                             .bold()
                         Spacer()
-                        VStack{
+                        VStack(alignment: .trailing){
                             Text("15 mins").padding(5)
                             HStack{
                                 Image(systemName: "figure.roll").foregroundColor(.green)
@@ -89,7 +88,7 @@ struct bus_numberView: View {
                     HStack{
                         Text("987").font(.system(size: 25))
                         Spacer()
-                        VStack{
+                        VStack(alignment: .trailing){
                             Text("4 mins").padding(5)
                             HStack{
                                 Image(systemName: "figure.roll").foregroundColor(.green)
@@ -105,7 +104,7 @@ struct bus_numberView: View {
                     HStack{
                         Text("75").font(.system(size: 25))
                         Spacer()
-                        VStack{
+                        VStack(alignment: . trailing){
                             Text("4 mins").padding(5)
                             HStack{
                                 Image(systemName: "figure.roll").foregroundColor(.red)

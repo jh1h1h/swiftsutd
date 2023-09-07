@@ -22,7 +22,7 @@ struct ContentView: View {
                                 NavigationLink {
                                     Text(String(name))
                                 } label: {
-                                    var index = numbers.firstIndex(of: name)
+                                    let index = numbers.firstIndex(of: name)
                                     VStack(alignment: .leading){
                                         Text(name)
                                             .font(.system(size: 15))
@@ -44,27 +44,27 @@ struct ContentView: View {
                         .searchable(text: $searchText)
                     }
                     
-            TabView {
-                MapView()
-                    .tabItem {
-                        Label("Received", systemImage: "tray.and.arrow.down.fill")
-                    }
-                ButtonView(names: names, numbers: numbers, roads: roads)
-                    .tabItem {
-                        Label("Received", systemImage: "tray.and.arrow.down.fill")
-                    }
-                ProfileView()
-                    .tabItem {
-                        Label("Sent", systemImage: "tray.and.arrow.up.fill")
-                    }
-            }
+//            TabView {
+//                HomeView()
+//                    .tabItem {
+//                        Label("Received", systemImage: "tray.and.arrow.down.fill")
+//                    }
+//                ButtonView(names: names, numbers: numbers, roads: roads)
+//                    .tabItem {
+//                        Label("Received", systemImage: "tray.and.arrow.down.fill")
+//                    }
+//                ProfileView()
+//                    .tabItem {
+//                        Label("Sent", systemImage: "tray.and.arrow.up.fill")
+//                    }
+//            }
             
             
             
                 }
-        VStack{
-            Image("bus")
-        }
+//        VStack{
+//            Image("bus")
+//        }
     }
     var searchResults:[String]{
         return numbers.filter{$0.contains(searchText)}

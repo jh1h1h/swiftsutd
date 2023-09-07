@@ -14,7 +14,11 @@ struct ButtonView: View {
     var roads:[String]
     var body: some View {
             NavigationStack {
+
                 List {
+                    VStack(alignment: . leading){
+                        Text("Near By")
+                    }
                     ForEach(names.indices, id: \.self) { index in
                         NavigationLink {
                             bus_numberView(busstop: names[index])
@@ -22,22 +26,23 @@ struct ButtonView: View {
                             VStack(alignment: .leading){
                                 Text(numbers[index]).padding(2)
                                     .font(.system(size: 15))
-                                    .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.994, brightness: 0.586)/*@END_MENU_TOKEN@*/)
+                                    .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.97, brightness: 0.803)/*@END_MENU_TOKEN@*/)
                                 Text(names[index]).bold().font(.system(size: 18))
                                 HStack{
                                     Image(systemName: "circle.fill")
                                         .font(.system(size: 5))
                                         .foregroundColor(/*@START_MENU_TOKEN@*/Color(hue: 0.098, saturation: 0.994, brightness: 0.586)/*@END_MENU_TOKEN@*/)
                                     Text(roads[index])
-                                        .font(.system(size: 10)).padding(2)
+                                        .font(.system(size: 15)).padding(2)
                                 }
                                 
                             }
                         }
-                        .listRowBackground(Color(hue: 0.072, saturation: 0.277, brightness: 0.933))
+//                        .listRowBackground(Color(hue: 0.072, saturation: 0.277, brightness: 0.933))
                     }
                 }
                 .navigationTitle("Bus Stations")
+                .navigationBarTitleDisplayMode(.inline)
                 .refreshable {
                     // This block is executed when the user pulls to refresh
                     await refreshData() // Call your refresh data function here
