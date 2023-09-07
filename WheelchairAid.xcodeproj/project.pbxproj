@@ -21,7 +21,7 @@
 		CE82F3D72AA933F600C596B7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3D62AA933F600C596B7 /* HomeView.swift */; };
 		CE8FEC792AA785C4009BA9DD /* bus_numberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */; };
 		CE8FEC7D2AA823E6009BA9DD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC7C2AA823E6009BA9DD /* MapView.swift */; };
-		CE8FEC812AA852CD009BA9DD /* BusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC802AA852CD009BA9DD /* BusView.swift */; };
+		CE8FEC812AA852CD009BA9DD /* BusStopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8FEC802AA852CD009BA9DD /* BusStopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		CE82F3D62AA933F600C596B7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bus_numberView.swift; sourceTree = "<group>"; };
 		CE8FEC7C2AA823E6009BA9DD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		CE8FEC802AA852CD009BA9DD /* BusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusView.swift; sourceTree = "<group>"; };
+		CE8FEC802AA852CD009BA9DD /* BusStopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusStopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +110,6 @@
 		5407F6C42AA5A26100867491 /* WheelchairAid */ = {
 			isa = PBXGroup;
 			children = (
-				CE11752D2AA85C0300E3B5D6 /* BusStopsView.swift */,
 				5407F6C52AA5A26100867491 /* WheelchairAidApp.swift */,
 				5407F6C72AA5A26100867491 /* ContentView.swift */,
 				CE82F3D42AA92F2300C596B7 /* Final View.swift */,
@@ -118,7 +117,7 @@
 				5407F6CB2AA5A26300867491 /* Preview Content */,
 				5407F6EF2AA6BE1B00867491 /* ButtonView.swift */,
 				CE82F3D62AA933F600C596B7 /* HomeView.swift */,
-				CE8FEC802AA852CD009BA9DD /* BusView.swift */,
+				CE8FEC802AA852CD009BA9DD /* BusStopView.swift */,
 				CE82F3D22AA87B7400C596B7 /* BusNumbersView.swift */,
 				CE8FEC782AA785C4009BA9DD /* bus_numberView.swift */,
 				CE8FEC7C2AA823E6009BA9DD /* MapView.swift */,
@@ -283,14 +282,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE82F3D32AA87B7400C596B7 /* BusNumbersView.swift in Sources */,
-				CE8FEC812AA852CD009BA9DD /* BusView.swift in Sources */,
+				CE8FEC812AA852CD009BA9DD /* BusStopView.swift in Sources */,
 				CE8FEC792AA785C4009BA9DD /* bus_numberView.swift in Sources */,
 				CE82F3D72AA933F600C596B7 /* HomeView.swift in Sources */,
 				CE8FEC7D2AA823E6009BA9DD /* MapView.swift in Sources */,
 				5407F6F42AA6C18100867491 /* ProfileView.swift in Sources */,
 				5407F6C82AA5A26100867491 /* ContentView.swift in Sources */,
 				5407F6C62AA5A26100867491 /* WheelchairAidApp.swift in Sources */,
-				CE11752E2AA85C0300E3B5D6 /* BusStopsView.swift in Sources */,
 				5407F6F02AA6BE1B00867491 /* ButtonView.swift in Sources */,
 				CE82F3D52AA92F2300C596B7 /* Final View.swift in Sources */,
 			);
