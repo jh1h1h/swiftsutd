@@ -1,104 +1,98 @@
-//
-//  ContentView.swift
-//  Directions
-//
-
-import MapKit
 import SwiftUI
-import UIKit
-
-struct MapShowView: View {
-
-  @State private var directions: [String] = []
-  @State private var showDirections = false
-
-  var body: some View {
-    VStack {
-      MapView(directions: $directions)
-
-      Button(action: {
-        self.showDirections.toggle()
-      }, label: {
-        Text("Show directions")
-      })
-      .disabled(directions.isEmpty)
-      .padding()
-    }.sheet(isPresented: $showDirections, content: {
-      VStack(spacing: 0) {
-        Text("Directions")
-          .font(.largeTitle)
-          .bold()
-          .padding()
-
-        Divider().background(Color(UIColor.systemBlue))
-
-        List(0..<self.directions.count, id: \.self) { i in
-          Text(self.directions[i]).padding()
-        }
-      }
-    })
-  }
-}
+import MapKit
 
 struct MapView: UIViewRepresentable {
+    @Binding var sourceCoordinate: CLLocationCoordinate2D
+    @Binding var destinationCoordinate: CLLocationCoordinate2D
 
-  typealias UIViewType = MKMapView
-
-  @Binding var directions: [String]
-
-  func makeCoordinator() -> MapViewCoordinator {
-    return MapViewCoordinator()
-  }
-
-  func makeUIView(context: Context) -> MKMapView {
-    let mapView = MKMapView()
-    mapView.delegate = context.coordinator
-
-    let region = MKCoordinateRegion(
-      center: CLLocationCoordinate2D(latitude: 1.3521, longitude: 103.8198),
-      span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
-    mapView.setRegion(region, animated: true)
-
-    // NYC
-    let p1 = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 1.3588, longitude: 103.7520))
-
-    // Boston
-    let p2 = MKPlacemark(coordinate: CLLocationCoordinate2D(latitude: 1.3496, longitude: 103.9568))
-
-    let request = MKDirections.Request()
-    request.source = MKMapItem(placemark: p1)
-    request.destination = MKMapItem(placemark: p2)
-    request.transportType = .automobile
-
-    let directions = MKDirections(request: request)
-    directions.calculate { response, error in
-      guard let route = response?.routes.first else { return }
-      mapView.addAnnotations([p1, p2])
-      mapView.addOverlay(route.polyline)
-      mapView.setVisibleMapRect(
-        route.polyline.boundingMapRect,
-        edgePadding: UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20),
-        animated: true)
-      self.directions = route.steps.map { $0.instructions }.filter { !$0.isEmpty }
+    func makeUIView(context: Context) -> MKMapView {
+        let mapView = MKMapView()
+        mapView.delegate = context.coordinator
+        return mapView
     }
-    return mapView
-  }
 
-  func updateUIView(_ uiView: MKMapView, context: Context) {
-  }
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        // Clear existing overlays and annotations
+        uiView.removeOverlays(uiView.overlays)
+        uiView.removeAnnotations(uiView.annotations)
 
-  class MapViewCoordinator: NSObject, MKMapViewDelegate {
-    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-      let renderer = MKPolylineRenderer(overlay: overlay)
-      renderer.strokeColor = .systemBlue
-      renderer.lineWidth = 5
-      return renderer
+        // Add source and destination markers
+        let sourceAnnotation = MKPointAnnotation()
+        sourceAnnotation.coordinate = sourceCoordinate
+        sourceAnnotation.title = "You"
+        
+        let destinationAnnotation = MKPointAnnotation()
+        destinationAnnotation.coordinate = destinationCoordinate
+        destinationAnnotation.title = "Bus"
+        
+        uiView.addAnnotation(sourceAnnotation)
+        uiView.addAnnotation(destinationAnnotation)
+
+        // Show the route
+        showRoute(on: uiView)
     }
-  }
+
+    func makeCoordinator() -> Coordinator {
+        Coordinator(self)
+    }
+
+    class Coordinator: NSObject, MKMapViewDelegate {
+        var parent: MapView
+
+        init(_ parent: MapView) {
+            self.parent = parent
+        }
+
+        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            let renderer = MKPolylineRenderer(overlay: overlay)
+            renderer.strokeColor = UIColor.blue
+            renderer.lineWidth = 5.0
+            return renderer
+        }
+    }
+
+    func showRoute(on mapView: MKMapView) {
+        let sourcePlacemark = MKPlacemark(coordinate: sourceCoordinate)
+        let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate)
+
+        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
+        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
+
+        let request = MKDirections.Request()
+        request.source = sourceMapItem
+        request.destination = destinationMapItem
+        request.transportType = .automobile
+
+        let directions = MKDirections(request: request)
+
+        directions.calculate { response, error in
+            if let route = response?.routes.first {
+                mapView.addOverlay(route.polyline, level: .aboveRoads)
+                let rect = route.polyline.boundingMapRect
+                mapView.setRegion(MKCoordinateRegion(rect), animated: true)
+            }
+        }
+    }
 }
 
+struct ContenttView: View {
+    var busnumer:String
+    var availablity:String
+    @State private var sourceCoordinate = CLLocationCoordinate2D(latitude: 1.363758, longitude: 103.749334)
+    @State private var destinationCoordinate = CLLocationCoordinate2D(latitude: 1.372387, longitude: 103.752868)
+    var body: some View {
+        VStack{
+            MapView(sourceCoordinate: $sourceCoordinate, destinationCoordinate: $destinationCoordinate)
+                .frame(width: 400,height: 300)
+            Text("Bus \(busnumer) has \(availablity) booth(s)").font(.system(size: 20))
+        }.offset(y:-150)
+            .navigationTitle("Bus Route")
+            .navigationBarTitleDisplayMode(.large)
+            .padding(.horizontal,20)
+    }
+}
 struct MapShowView_Previews: PreviewProvider {
-  static var previews: some View {
-    MapShowView()
-  }
+    static var previews: some View {
+        ContenttView(busnumer: "444", availablity: "2")
+    }
 }

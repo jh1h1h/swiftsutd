@@ -9,114 +9,42 @@ import SwiftUI
 
 struct bus_numberView: View {
     var busstop:String
-    @State private var isRefreshing = false 
+    var busNumbers = ["2","12E","21A","187","98A","268","268B","602","603","702","702A"]
+    let availability = ["0", "1", "2", "0", "2", "1", "0", "2", "2", "1", "1"]
+    let minutes=["2","5","10","10","10","10","10","10","10","26","30"]
+    @State private var isRefreshing = false
     var body: some View {
         NavigationStack {
                 
             List{
+                ForEach(busNumbers.indices, id: \.self) { index in
                     NavigationLink {
-                        Text("hi")
+                        ContenttView(busnumer: busNumbers[index], availablity: availability[index])
                     } label: {
                         HStack{
-                            Text("945").font(.system(size: 25))
+                            Text(busNumbers[index]).font(.system(size: 25))
                                 .bold()
                             Spacer()
                             VStack(alignment: . trailing){
-                                Text("2 mins").padding(5)
-                                HStack{
-                                    Image(systemName: "figure.roll").foregroundColor(.green)
-                                    Text("2 available").padding(5)
+                                Text(minutes[index]+" mins").padding(5)
+                                if( availability[index]=="0"){
+                                    HStack{
+                                        Image(systemName: "figure.roll").foregroundColor(.red)
+                                        Text(availability[index]+" available").padding(5)
+                                    }
+                                }
+                                else{
+                                    HStack{
+                                        Image(systemName: "figure.roll").foregroundColor(.green)
+                                        Text(availability[index]+" available").padding(5)
+                                    }
                                 }
                                 
                             }
                         }
                     }
-                NavigationLink {
-                    Text("map")
-                } label: {
-                    HStack{
-                        Text("960").font(.system(size: 25))
-                            .bold()
-                        Spacer()
-                        VStack(alignment: . trailing){
-                            Text("5 mins").padding(5)
-                            HStack{
-                                Image(systemName: "figure.roll").foregroundColor(.red)
-                                Text("0 available").padding(5)
-                            }
-                            
-                        }
-                    }
                 }
-                NavigationLink {
-                    Text("map")
-                } label: {
-                    HStack{
-                        Text("187").font(.system(size: 25))
-                            .bold()
-                        Spacer()
-                        VStack(alignment: .trailing){
-                            Text("7 mins").padding(5)
-                            HStack{
-                                Image(systemName: "figure.roll").foregroundColor(.green)
-                                Text("1 available").padding(5)
                             }
-                            
-                        }
-                    }
-                }
-                NavigationLink {
-                    Text("map")
-                } label: {
-                    HStack{
-                        Text("188").font(.system(size: 25))
-                            .bold()
-                        Spacer()
-                        VStack(alignment: .trailing){
-                            Text("15 mins").padding(5)
-                            HStack{
-                                Image(systemName: "figure.roll").foregroundColor(.green)
-                                Text("2 available").padding(5)
-                            }
-                            
-                        }
-                    }
-                }
-                NavigationLink {
-                    Text("map")
-                } label: {
-                    HStack{
-                        Text("987").font(.system(size: 25))
-                            .bold()
-                        Spacer()
-                        VStack(alignment: .trailing){
-                            Text("4 mins").padding(5)
-                            HStack{
-                                Image(systemName: "figure.roll").foregroundColor(.green)
-                                Text("1 available").padding(5)
-                            }
-                            
-                        }
-                    }
-                }
-                NavigationLink {
-                    Text("map")
-                } label: {
-                    HStack{
-                        Text("75").font(.system(size: 25))
-                            .bold()
-                        Spacer()
-                        VStack(alignment: . trailing){
-                            Text("4 mins").padding(5)
-                            HStack{
-                                Image(systemName: "figure.roll").foregroundColor(.red)
-                                Text("0 available").padding(5)
-                            }
-                            
-                        }
-                    }
-                }
-            }
 //            .listStyle(InsetListStyle())
             .navigationTitle(busstop)
             .navigationBarTitleDisplayMode(.inline)
